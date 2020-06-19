@@ -1,0 +1,43 @@
+<root>
+    <bean id="computer" class="com.ivan.framework.Computer">
+        <property name="hdd" ref="hdd"/>
+        <property name="matherBoard" ref="matherBoard"/>
+        <property name="videoCard" ref="videoCard"/>
+        <property name="softWare" ref="softWare"/>
+    </bean>
+    <bean id="hdd" class="com.ivan.framework.Hdd">
+        <property name="memory" val="500"/>
+        <property name="company" val="samsung"/>
+    </bean>
+    <bean id="matherBoard" class="com.ivan.framework.MatherBoard">
+        <property name="chipseat" ref="chipseat"/>
+        <property name="model" val="zsh500"/>
+    </bean>
+    <bean id="videoCard" class="com.ivan.framework.VideoCard">
+        <property name="company" val="nvidia"/>
+        <property name="memory" val="500Mb"/>
+    </bean>
+    <bean id="softWare" class="com.ivan.framework.SoftWare">
+        <property name="operationSystem" ref="operationSystem"/>
+        <property name="programs" ref="programs"/>
+    </bean>
+    <bean id="chipseat" class="com.ivan.framework.Chipseat">
+        <property name="model" val="x500hd"/>
+    </bean>
+    <bean id="operationSystem" class="com.ivan.framework.OperationSystem">
+        <property name="name" val="windows"/>
+        <property name="x32or64" val="X64"/>
+    </bean>
+    <bean id="programs" class="java.util.ArrayList">
+        <property name="msOffice" ref="msOffice"/>
+        <property name="googleChrome" ref="googleChrome"/>
+    </bean>
+    <bean id="program" class="com.ivan.framework.MsOffice">
+        <property name="name" val="Microsoft Office 2007"/>
+        <property name="version" val="10.5.3"/>
+    </bean>
+    <bean id="program" class="com.ivan.framework.GoogleChrome">
+        <property name="name" val="Chrome browser"/>
+        <property name="version" val="15.2.7"/>
+    </bean>
+</root>

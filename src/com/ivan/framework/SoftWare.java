@@ -6,7 +6,9 @@ public class SoftWare {
     private OperationSystem operationSystem;
     private ArrayList<Program> programs;
 
-    public SoftWare() {}
+    public SoftWare() {
+        programs = null;
+    }
 
     public OperationSystem getOperationSystem() {
         return operationSystem;
@@ -27,8 +29,10 @@ public class SoftWare {
     @Override
     public String toString() {
         String strProg = "";
-        for (Program prog : programs) {
-            strProg += prog + ", ";
+        if(programs != null) {
+            for (Program prog : programs) {
+                strProg += prog + ", ";
+            }
         }
         return "SoftWare{" +
                 "operationSystem=" + operationSystem +
