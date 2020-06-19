@@ -4,6 +4,7 @@
         <property name="matherBoard" ref="matherBoard"/>
         <property name="videoCard" ref="videoCard"/>
         <property name="softWare" ref="softWare"/>
+        <property name="cooler" ref="cooler"/>
     </bean>
     <bean id="hdd" class="com.ivan.framework.Hdd">
         <property name="memory" val="500"/>
@@ -16,6 +17,7 @@
     <bean id="videoCard" class="com.ivan.framework.VideoCard">
         <property name="company" val="nvidia"/>
         <property name="memory" val="500Mb"/>
+        <property name="cooler" ref="cooler"/>
     </bean>
     <bean id="softWare" class="com.ivan.framework.SoftWare">
         <property name="operationSystem" ref="operationSystem"/>
@@ -32,12 +34,15 @@
         <property name="msOffice" ref="msOffice"/>
         <property name="googleChrome" ref="googleChrome"/>
     </bean>
-    <bean id="program" class="com.ivan.framework.MsOffice">
+    <bean id="msOffice" class="com.ivan.framework.MsOffice">
         <property name="name" val="Microsoft Office 2007"/>
         <property name="version" val="10.5.3"/>
     </bean>
-    <bean id="program" class="com.ivan.framework.GoogleChrome">
+    <bean id="googleChrome" class="com.ivan.framework.GoogleChrome">
         <property name="name" val="Chrome browser"/>
         <property name="version" val="15.2.7"/>
+    </bean>
+    <bean id="cooler" class="com.ivan.framework.Cooler">
+        <property name="videoCard" ref="videoCard"/>
     </bean>
 </root>

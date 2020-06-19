@@ -7,7 +7,7 @@ public class SoftWare {
     private ArrayList<Program> programs;
 
     public SoftWare() {
-        programs = null;
+        programs = new ArrayList<>();
     }
 
     public OperationSystem getOperationSystem() {

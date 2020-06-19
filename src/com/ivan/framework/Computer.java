@@ -5,6 +5,7 @@ public class Computer {
     private MatherBoard matherBoard;
     private VideoCard videoCard;
     private SoftWare softWare;
+    private Cooler cooler;
 
     public Computer() {}
 
@@ -40,13 +41,22 @@ public class Computer {
         this.softWare = softWare;
     }
 
+    public Cooler getCooler() {
+        return cooler;
+    }
+
+    public void setCooler(Cooler cooler) {
+        this.cooler = cooler;
+    }
+
     @Override
     public String toString() {
-        return "Computer{" +
-                "hdd=" + hdd +
-                ", matherBoard=" + matherBoard +
-                ", videoCard=" + videoCard +
-                ", softWare=" + softWare +
+        return "Computer{" + "\n" +
+                "hdd=" + hdd + "\n" +
+                ", matherBoard=" + matherBoard + "\n" +
+                ", videoCard=" + videoCard + "\n" +
+                ", softWare=" + softWare + "\n" +
+                ", cooler=" + cooler + "\n" +
                 '}';
     }
 }
