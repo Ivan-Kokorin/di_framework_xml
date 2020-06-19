@@ -6,5 +6,6 @@ public class Main {
     public static void main(String[] args) {
 //        Computer computer = new Computer();
         Context context = new Context("settings.xml");
+        System.out.println(context.getById("Computer"));
     }
 }

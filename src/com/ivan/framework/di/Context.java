@@ -96,12 +96,9 @@ public class Context {
         for (Bean bean : beans) {
             Class<?> aClass = Class.forName(bean.getClassName());
             Object ob = aClass.newInstance();
-            mapObject.put(bean.getId(), ob);
+            mapObject.put(ob.getClass().getSimpleName(), ob);
         }
-        for (Object ob :
-                mapObject.values()) {
-            System.out.println(ob);
-        }
+
 
     }
 
